@@ -1,0 +1,15 @@
+#Node
+/node_modules
+/node_modules/*
+
+#EDITORS
+/.vscode/
+
+#processors
+package-lock.json
+composer.lock
+
+#distribution
+/webroot
+
+app/.DS_Store
