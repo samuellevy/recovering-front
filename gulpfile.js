@@ -70,10 +70,11 @@ gulp.task("watch", function() {
     server: target,
     browser: "firefox"
   });
-  gulp.watch(src + "scss/*.scss", gulp.series("sass"));
+  gulp.watch(src + "scss/**/*.scss", gulp.series("sass"));
   gulp.watch(src + "js/*.js", gulp.series("scripts"));
   gulp.watch(src + "images/*", gulp.series("images"));
-  gulp.watch(src + "**/*.html", gulp.series("pages"));
+  gulp.watch(src + "**/*.pug", gulp.series("views"));
+  // gulp.watch(src + "**/*.html", gulp.series("pages"));
 });
 
 gulp.task("views", function buildHTML() {
@@ -84,16 +85,19 @@ gulp.task("views", function buildHTML() {
         // Your options in here.
       })
     )
-    .pipe(gulp.dest(target));
+    .pipe(gulp.dest(target))
+    .pipe(
+      browserSync.reload({
+        // Reloading with Browser Sync
+        stream: true
+      })
+    );
 });
 
 //compile and watch
 gulp.task(
   "dev",
-  gulp.series(
-    gulp.parallel("clean", "sass", "scripts", "images", "pages"),
-    "watch"
-  ),
+  gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "pages"), "watch"),
   function() {}
 );
 
