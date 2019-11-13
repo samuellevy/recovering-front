@@ -97,7 +97,7 @@ gulp.task("views", function buildHTML() {
 //compile and watch
 gulp.task(
   "dev",
-  gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "view"), "watch"),
+  gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "views"), "watch"),
   function() {}
 );
 
