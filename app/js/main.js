@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 let site = {
   init: function() {
     console.log("rolando");
-    site.handleMenuClick();
     site.buttonsListenner();
   },
   buttonsListenner: function() {
@@ -16,10 +15,6 @@ let site = {
         site.toggleMenu();
       };
     }
-  },
-  handleMenuClick: function() {
-    let checkBoxInput = document.getElementById("checkBoxInput");
-    site.toggleMenu();
   },
   toggleMenu: function() {
     let checkBoxInput = document.getElementById("checkBoxInput");
