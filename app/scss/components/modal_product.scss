@@ -1,0 +1,201 @@
+.modal_product{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f9ea19;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  .hud{
+    width: 4.2%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .buttons{
+      width: 100%;
+      height: 27%;
+      background: #000;
+    }
+    .title{
+      width: 100%;
+      height: 73%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title_rotate{
+        transform: rotate(270deg);
+        text-align: left;
+        font-size: 48px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        text-align: center;
+        color: #707070;
+        opacity: 0.2;
+      }
+    }
+  }
+  .description{
+    width: 30.8%;
+    height: 100vh;
+    margin-top: 70px;
+    .brand{
+      margin-bottom: 60px;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      img{
+        width: 100%;
+      }
+    }
+    .description_text{
+      width: 68%;
+      margin: 60px auto;
+      p{
+        margin-bottom: 30px;
+        font-size: 1em;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.56;
+        letter-spacing: 0.48px;
+        text-align: left;
+        color: #000000;
+      }
+    }
+    .product_cta{
+      width: 70%;
+      margin: 0 auto;
+      a{
+        border: solid 3px #000000;
+        font-size: 19px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: 1.71px;
+        text-align: center;
+        color: #000000;
+        padding: 20px 15px;
+        display: block;
+      }
+    }
+    .texture{
+      width: 50%;
+      margin: 50px auto;
+      .texture_title{
+        font-size: 20px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: 0.6px;
+        text-align: left;
+        color: #000000;
+        text-transform: uppercase;
+      }
+      .download_texture{
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+        a{
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+      }
+    }
+  }
+  .media{
+    width: 65%;
+    position: relative;
+    height: 100vh;
+    .slider_product{
+      width: 100%;
+      .slick-dots{
+        position: absolute;
+        bottom: 52px;
+        display: flex;
+        justify-content: space-between;
+        li{
+          padding: 0 5px;
+          &.slick-active{
+            button{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              opacity: 1;
+              &:after{
+                content: '';
+                display: block;
+                width: 50px;
+                height: 2px;
+                background: #fff;
+                margin-left: 5px;
+                transition: all 0.2s linear;
+              }
+            }
+          }
+          button{
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font-size: 22px;
+            opacity: 0.3;
+            &:after{
+              content: '';
+              display: block;
+              width: 0px;
+              height: 2px;
+              background: #fff;
+              margin-left: 5px;
+              transition: all 0.2s linear;
+            }
+          }
+        }
+      }
+      .slick-prev{
+        display: none !important;
+      }
+      .slick-next{
+        display: block;
+        position: absolute;
+        bottom: 50px;
+        border: 0;
+        background: transparent;
+        font-size: 0;
+        &:after{
+          content: '>';
+          display: block;
+          font-size: 22px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      .item{
+        width: 100%;
+        img{
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

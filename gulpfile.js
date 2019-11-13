@@ -11,7 +11,7 @@ var src = "./app/";
 var target = "./webroot/";
 
 //compile
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   return gulp
     .src(src + "scss/*")
     .pipe(sass().on("error", sass.logError))
@@ -24,7 +24,7 @@ gulp.task("sass", function() {
     );
 });
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src(src + "js/*")
     .pipe(gulp.dest(target + "js/"))
@@ -36,7 +36,7 @@ gulp.task("scripts", function() {
     );
 });
 
-gulp.task("images", function() {
+gulp.task("images", function () {
   return gulp
     .src(src + "images/*")
     .pipe(gulp.dest(target + "images/"))
@@ -48,7 +48,7 @@ gulp.task("images", function() {
     );
 });
 
-gulp.task("pages", function() {
+gulp.task("pages", function () {
   return gulp
     .src(src + "*.html")
     .pipe(gulp.dest(target))
@@ -60,15 +60,14 @@ gulp.task("pages", function() {
     );
 });
 
-gulp.task("clean", function(cb) {
+gulp.task("clean", function (cb) {
   // return del.sync([target+'/**/*', '!'+target+'/images', '!'+target+'/images/**/*', '!'+target+'index.php']);
   return del([target + "**/*"], cb);
 });
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   browserSync.init({
-    server: target,
-    browser: "firefox"
+    server: target
   });
   gulp.watch(src + "scss/**/*.scss", gulp.series("sass"));
   gulp.watch(src + "js/*.js", gulp.series("scripts"));
@@ -98,8 +97,8 @@ gulp.task("views", function buildHTML() {
 gulp.task(
   "dev",
   gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "views"), "watch"),
-  function() {}
+  function () { }
 );
 
 // default function
-gulp.task("default", function() {});
+gulp.task("default", function () { });
