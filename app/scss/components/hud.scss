@@ -1,15 +1,15 @@
 div.hud {
   &#top {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 150px);
     height: 75px;
     background-color: #70707055;
     margin: 0 75px;
   }
   &#right {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0px;
     width: 75px;
@@ -17,16 +17,16 @@ div.hud {
     background-color: #70707055;
   }
   &#bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 150px);
     height: 75px;
     margin: 0 75px;
     background-color: #70707055;
   }
   &#left {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 75px;

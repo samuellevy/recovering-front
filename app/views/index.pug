@@ -10,11 +10,12 @@ html(lang="en")
     div#main
       div.content
         include pages/home.pug
+        include pages/home.pug
+      div.hud#left
+      div.hud#right
+      div.hud#bottom
       div.hud#top
         header
             img.logo(src="images/logo.png", alt="")
             nav(role="navigation")
               include menu.pug
-      div.hud#left
-      div.hud#right
-      div.hud#bottom

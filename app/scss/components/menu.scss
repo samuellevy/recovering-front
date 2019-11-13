@@ -1,8 +1,6 @@
 nav {
-  position: relative;
   #menuToggle {
     display: block;
-    position: relative;
     z-index: 1;
     user-select: none;
   }
@@ -12,14 +10,11 @@ nav {
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -7px;
-    left: -5px;
-
+    top: 20px;
+    right: -5px;
     cursor: pointer;
-
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
-
     -webkit-touch-callout: none;
   }
 
@@ -58,14 +53,14 @@ nav {
    */
   #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -13px);
-    background: #232323;
+    transform: rotate(45deg) translate(-8px, 0);
+    background: #ffffff;
   }
 
   /*
    * But let's hide the middle one.
    */
-  #menuToggle input:checked ~ span:nth-last-child(3) {
+  #menuToggle input:checked ~ span:nth-last-child(1) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
@@ -74,7 +69,7 @@ nav {
    * Ohyeah and the last one should go the other direction
    */
   #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(-6px, 19px);
+    transform: rotate(-45deg) translate(-7px, 0px);
   }
 
   /*
@@ -83,30 +78,31 @@ nav {
    */
   #menu {
     position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    background: #ededed;
+    background: #000000cc;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   #menu li {
     padding: 10px 0;
     font-size: 22px;
+    color: #ffffff;
   }
 
-  /*
-   * And let's slide it in from the left
-   */
   #menuToggle input:checked ~ ul {
     transform: none;
   }
