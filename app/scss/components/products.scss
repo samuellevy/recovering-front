@@ -11,16 +11,16 @@ section#Products {
       height: 100%;
       display: flex;
       .presentation {
-        padding: 100px;
+        padding: 6vw;
         width: 100%;
         display: flex;
-        font-size: 1em;
+        font-size: 1vw;
         p {
-          margin: 20px 0;
+          margin: 1vw 0;
         }
         .side {
           width: 30%;
-          padding-right: 60px;
+          padding-right: 2vw;
           position: relative;
           > img {
             position: absolute;
@@ -33,15 +33,18 @@ section#Products {
         .catalog_footer {
           button {
             background-color: transparent;
-            border: 2px solid #000;
-            padding: 10px;
+            border: 0.2vw solid #000;
+            padding: 1vw;
             width: 100%;
-            font-size: 1.1em;
+            font-size: 1vw;
             text-transform: uppercase;
             font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            > img {
+              width: 1.5vw;
+            }
           }
         }
       }

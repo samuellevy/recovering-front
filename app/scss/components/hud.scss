@@ -3,16 +3,16 @@ div.hud {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 150px);
-    height: 75px;
+    width: calc(100% - 10.8vw);
+    height: 5.4vw;
     background-color: #70707055;
-    margin: 0 75px;
+    margin: 0 5.4vw;
   }
   &#right {
     position: fixed;
     top: 0;
     right: 0px;
-    width: 75px;
+    width: 5.4vw;
     height: 100%;
     background-color: #70707055;
   }
@@ -20,16 +20,16 @@ div.hud {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: calc(100% - 150px);
-    height: 75px;
-    margin: 0 75px;
+    width: calc(100% - 10.8vw);
+    height: 5.4vw;
+    margin: 0 5.4vw;
     background-color: #70707055;
   }
   &#left {
     position: fixed;
     top: 0;
     left: 0;
-    width: 75px;
+    width: 5.4vw;
     height: 100%;
     background-color: #70707055;
   }

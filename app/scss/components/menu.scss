@@ -7,11 +7,11 @@ nav {
 
   #menuToggle input {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 3.7vw;
+    height: 2.8vw;
     position: absolute;
-    top: 20px;
-    right: -5px;
+    top: 1.1vw;
+    right: -0.6vw;
     cursor: pointer;
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
@@ -23,9 +23,9 @@ nav {
    */
   #menuToggle span {
     display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    width: 2.3vw;
+    height: 0.29vw;
+    margin-bottom: 0.5vw;
     position: relative;
 
     background: #ffffff;
@@ -53,7 +53,7 @@ nav {
    */
   #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(-8px, 0);
+    transform: rotate(45deg) translate(-0.5vw, 0);
     background: #ffffff;
   }
 
@@ -69,7 +69,7 @@ nav {
    * Ohyeah and the last one should go the other direction
    */
   #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(-7px, 0px);
+    transform: rotate(-45deg) translate(-0.4vw, 0);
   }
 
   /*
@@ -81,7 +81,7 @@ nav {
     width: 100vw;
     height: 100vh;
     top: 0;
-    left: -75px;
+    left: -5.4vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
