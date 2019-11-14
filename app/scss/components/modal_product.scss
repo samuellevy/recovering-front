@@ -1,35 +1,35 @@
-.modal_product{
+.modal_product {
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #f9ea19;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  .hud{
+  .hud {
     width: 4.2%;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .buttons{
+    .buttons {
       width: 100%;
       height: 27%;
       background: #000;
     }
-    .title{
+    .title {
       width: 100%;
       height: 73%;
       display: flex;
       justify-content: center;
       align-items: center;
-      .title_rotate{
+      .title_rotate {
         transform: rotate(270deg);
         text-align: left;
-        font-size: 48px;
+        font-size: 2vw;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -41,26 +41,26 @@
       }
     }
   }
-  .description{
+  .description {
     width: 30.8%;
     height: 100vh;
-    margin-top: 70px;
-    .brand{
+    margin-top: 5vh;
+    .brand {
       margin-bottom: 60px;
       width: 90%;
       margin: 0 auto;
       display: flex;
       justify-content: center;
-      img{
+      img {
         width: 100%;
       }
     }
-    .description_text{
+    .description_text {
       width: 68%;
-      margin: 60px auto;
-      p{
-        margin-bottom: 30px;
-        font-size: 1em;
+      margin: 2vw auto;
+      p {
+        margin-bottom: 1vw;
+        font-size: 0.8vw;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -70,27 +70,27 @@
         color: #000000;
       }
     }
-    .product_cta{
+    .product_cta {
       width: 70%;
       margin: 0 auto;
-      a{
-        border: solid 3px #000000;
-        font-size: 19px;
+      a {
+        border: solid 0.2vw #000;
+        font-size: 0.9vw;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.21;
-        letter-spacing: 1.71px;
+        letter-spacing: 0.1vw;
         text-align: center;
         color: #000000;
-        padding: 20px 15px;
+        padding: 1vw 1vw;
         display: block;
       }
     }
-    .texture{
+    .texture {
       width: 50%;
       margin: 50px auto;
-      .texture_title{
+      .texture_title {
         font-size: 20px;
         font-weight: 600;
         font-stretch: normal;
@@ -101,7 +101,7 @@
         color: #000000;
         text-transform: uppercase;
       }
-      .download_texture{
+      .download_texture {
         margin-top: 10px;
         font-size: 15px;
         font-weight: normal;
@@ -111,7 +111,7 @@
         letter-spacing: normal;
         text-align: left;
         color: #000000;
-        a{
+        a {
           font-weight: bold;
           font-size: 15px;
           line-height: 1.2;
@@ -122,27 +122,27 @@
       }
     }
   }
-  .media{
+  .media {
     width: 65%;
     position: relative;
     height: 100vh;
-    .slider_product{
+    .slider_product {
       width: 100%;
-      .slick-dots{
+      .slick-dots {
         position: absolute;
         bottom: 52px;
         display: flex;
         justify-content: space-between;
-        li{
+        li {
           padding: 0 5px;
-          &.slick-active{
-            button{
+          &.slick-active {
+            button {
               display: flex;
               justify-content: space-between;
               align-items: center;
               opacity: 1;
-              &:after{
-                content: '';
+              &:after {
+                content: "";
                 display: block;
                 width: 50px;
                 height: 2px;
@@ -152,14 +152,14 @@
               }
             }
           }
-          button{
+          button {
             border: 0;
             background: transparent;
             color: #fff;
             font-size: 22px;
             opacity: 0.3;
-            &:after{
-              content: '';
+            &:after {
+              content: "";
               display: block;
               width: 0px;
               height: 2px;
@@ -170,27 +170,27 @@
           }
         }
       }
-      .slick-prev{
+      .slick-prev {
         display: none !important;
       }
-      .slick-next{
+      .slick-next {
         display: block;
         position: absolute;
         bottom: 50px;
         border: 0;
         background: transparent;
         font-size: 0;
-        &:after{
-          content: '>';
+        &:after {
+          content: ">";
           display: block;
           font-size: 22px;
           color: #fff;
           cursor: pointer;
         }
       }
-      .item{
+      .item {
         width: 100%;
-        img{
+        img {
           width: 100%;
           height: 100vh;
           object-fit: cover;
