@@ -17,19 +17,43 @@ section#Gallery {
           display: flex;
           justify-content: center;
           flex-direction: column;
-          padding: 0 4%;
+          padding: 0 3%;
           position: relative;
           ul {
+            li {
+              font-size: 1vw;
+              text-transform: uppercase;
+              padding: 0.8vw 0;
+              &.active {
+                font-weight: bold;
+                text-decoration: underline;
+              }
+            }
           }
           footer {
             position: absolute;
             bottom: 20%;
+            > p {
+              text-transform: uppercase;
+              font-weight: bold;
+              > small {
+                color: #707070;
+                font-weight: normal;
+                display: flex;
+                align-items: center;
+                i {
+                  font-style: normal;
+                  font-size: 1.4vw;
+                  margin-left: 0.4vw;
+                }
+              }
+            }
           }
         }
         &.gallery_content {
           // background-color: darkolivegreen;
           flex-grow: 1;
-          width: 80%;
+          width: 75%;
           display: flex;
           align-items: center;
           padding-top: 2%;
