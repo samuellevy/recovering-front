@@ -1,0 +1,157 @@
+.modal_alert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  position: absolute;
+  width: 45vw;
+  height: 20vw;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vw 3.5vw;
+  .news{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .alert_title{
+      font-size: 1.8vw;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+    }
+    .form_news{
+      margin-top: .7vw;
+      form{
+        .title_news{
+          font-size: .8vw;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2.08;
+          letter-spacing: 0.36px;
+          text-align: left;
+          color: #000000;
+        }
+        input{
+          background: #f9ea19;
+          width: 100%;
+          padding: 1vw;
+          border: 0;
+          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: 1.56;
+            letter-spacing: 0.48px;
+            text-align: center;
+            color: #000000;
+            opacity: 1;
+          }
+        }
+        .accept{
+          display: flex;
+          justify-content: flex-start;
+          input{
+            margin-top: .5vw;
+            cursor: pointer;
+            height: 1vw;
+            width: 1vw;
+          }
+          span{
+            display: block;
+            font-size: .8vw;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: 1.23;
+            letter-spacing: normal;
+            text-align: left;
+            color: #707070;
+            margin-top: 0.5vw;
+            margin-left: .2vw;
+          }
+        }
+        .submit{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          .submit_news{
+            font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            border: 0;
+            font-size: 1vw;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            padding: .8vw 2.4vw;
+            margin-top: 1.5vw;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .success_message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:  0 3vw;
+    .message{
+      p{
+        font-size: 1.4vw;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.36;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 1vw;
+      }
+    }
+    .whatsapp{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img{
+
+      }
+      .contact{
+        margin-left: 1vw;
+        h2{
+          font-size: 2.9vw;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.23;
+          letter-spacing: 1.4px;
+          text-align: left;
+          color: #000000;
+        }
+        span{
+          font-size: 1.4vw;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

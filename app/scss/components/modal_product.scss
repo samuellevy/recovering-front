@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  overflow: hidden;
   .hud {
     width: 4.2%;
     height: 100vh;
@@ -89,9 +90,9 @@
     }
     .texture {
       width: 50%;
-      margin: 50px auto;
+      margin: 3vw auto;
       .texture_title {
-        font-size: 20px;
+        font-size: 1.1vw;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
@@ -113,7 +114,7 @@
         color: #000000;
         a {
           font-weight: bold;
-          font-size: 15px;
+          font-size: 1vw;
           line-height: 1.2;
           letter-spacing: normal;
           text-align: left;
@@ -176,7 +177,7 @@
       .slick-next {
         display: block;
         position: absolute;
-        bottom: 50px;
+        bottom: 52px;
         border: 0;
         background: transparent;
         font-size: 0;
