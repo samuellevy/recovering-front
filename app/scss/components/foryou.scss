@@ -1,0 +1,161 @@
+section#Foryou {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .container {
+    height: 100%;
+    .content {
+      background-color: #f5f5f5;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      > div {
+        &.foryou_menu {
+          // background-color: tomato;
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0 3%;
+          position: relative;
+          ul {
+            li {
+              font-size: 1vw;
+              text-transform: uppercase;
+              padding: 0.8vw 0;
+              cursor: pointer;
+              &.active {
+                font-weight: bold;
+                text-decoration: underline;
+              }
+            }
+          }
+          footer {
+            position: absolute;
+            bottom: 20%;
+            > p {
+              text-transform: uppercase;
+              font-weight: bold;
+              > small {
+                color: #707070;
+                font-weight: normal;
+                display: flex;
+                align-items: center;
+                i {
+                  font-style: normal;
+                  font-size: 1.4vw;
+                  margin-left: 0.4vw;
+                }
+              }
+            }
+          }
+        }
+        &.foryou_content {
+          // background-color: darkolivegreen;
+          flex-grow: 1;
+          width: 75%;
+          display: flex;
+          align-items: center;
+          padding-top: 2%;
+          .track {
+            position: relative;
+            display: none;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 3vw;
+            overflow: scroll;
+            &.active {
+              display: flex;
+            }
+            article {
+              background-color: white;
+              border: 1px #707070 solid;
+              width: 30%;
+              height: 35%;
+              padding: 1.8vw;
+              margin-top: 2vw;
+              h1 {
+                text-transform: uppercase;
+                font-size: 1vw;
+                letter-spacing: 0.12vw;
+                color: #707070;
+              }
+              .description {
+                margin-top: 1vw;
+                font-size: 1vw;
+                color: #707070;
+                .read_more {
+                  margin-top: 1vw;
+                  text-align: right;
+                }
+              }
+
+              &:nth-child(odd) {
+                margin-right: 4vw;
+              }
+
+              &.article_b {
+                width: 55%;
+                display: flex;
+                background-color: #e2e2e2;
+                .text {
+                  width: 50%;
+                }
+                figure {
+                  width: 50%;
+                  img {
+                    margin-left: 10%;
+                    width: 90%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                }
+              }
+              &.article_c {
+                width: 55%;
+                display: flex;
+                background-color: #707070;
+                .text {
+                  width: 50%;
+                  h1 {
+                    color: #fbeb3d;
+                  }
+                  .description {
+                    color: #f6f6f6;
+                  }
+                }
+                figure {
+                  width: 50%;
+                  img {
+                    margin-left: 10%;
+                    width: 90%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                }
+              }
+              &.article_d {
+                padding: 0;
+                figure {
+                  width: 100%;
+                  height: 100%;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

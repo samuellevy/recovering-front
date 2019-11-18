@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   site.init();
   gallery.init();
+  foryou.init();
   $(".media .slider_product").slick({
     dots: true
   });
@@ -43,6 +44,23 @@ let gallery = {
       let track = $(`.gallery_content .track[data-id=${data_id}]`);
       $(".gallery_content .track").removeClass("active");
       $(".gallery_menu ul li").removeClass("active");
+      track.addClass("active");
+      $(this).addClass("active");
+    });
+  }
+};
+
+let foryou = {
+  init: function() {
+    console.log("foryou");
+    foryou.buttonsListenner();
+  },
+  buttonsListenner: function() {
+    $(".foryou_menu ul li").click(function() {
+      let data_id = $(this).attr("data-id");
+      let track = $(`.foryou_content .track[data-id=${data_id}]`);
+      $(".foryou_content .track").removeClass("active");
+      $(".foryou_menu ul li").removeClass("active");
       track.addClass("active");
       $(this).addClass("active");
     });
