@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   site.init();
+  gallery.init();
   $(".media .slider_product").slick({
     dots: true
   });
@@ -28,5 +29,22 @@ let site = {
   toggleMenu: function() {
     let checkBoxInput = document.getElementById("checkBoxInput");
     checkBoxInput.checked = checkBoxInput.checked ? false : true;
+  }
+};
+
+let gallery = {
+  init: function() {
+    console.log("gallery");
+    gallery.buttonsListenner();
+  },
+  buttonsListenner: function() {
+    $(".gallery_menu ul li").click(function() {
+      let data_id = $(this).attr("data-id");
+      let track = $(`.gallery_content .track[data-id=${data_id}]`);
+      $(".gallery_content .track").removeClass("active");
+      $(".gallery_menu ul li").removeClass("active");
+      track.addClass("active");
+      $(this).addClass("active");
+    });
   }
 };

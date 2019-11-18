@@ -4,8 +4,8 @@ section#Gallery
     .content
       .gallery_menu
         ul
-          li.active Todos
-          li Laminados
+          li.active(data-id="1") Todos
+          li(data-id="2") Laminados
           li Vinílicos
           li Grandes Formatos
         footer
@@ -14,7 +14,12 @@ section#Gallery
             small Envie seu projeto
               i ➜
       .gallery_content
-        .track
+        .track(data-id="1")
+          - for (var i = 0; i < 10; ++i) {
+            figure
+              img(src="images/gallery_kronotex.png", alt="")
+          - }
+        .track.active(data-id="2")
           - for (var i = 0; i < 10; ++i) {
             figure
               img(src="images/gallery_kronotex.png", alt="")

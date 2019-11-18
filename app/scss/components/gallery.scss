@@ -24,6 +24,7 @@ section#Gallery {
               font-size: 1vw;
               text-transform: uppercase;
               padding: 0.8vw 0;
+              cursor: pointer;
               &.active {
                 font-weight: bold;
                 text-decoration: underline;
@@ -60,8 +61,11 @@ section#Gallery {
           .track {
             position: relative;
             width: 2000px;
-            display: flex;
+            display: none;
             overflow-x: auto;
+            &.active {
+              display: flex;
+            }
             > figure {
               margin-left: -170px;
               &:nth-child(even) {
