@@ -14,12 +14,12 @@ section#Gallery
             small Envie seu projeto
               i ➜
       .gallery_content
-        .track(data-id="1")
+        .track.active(data-id="1")
           - for (var i = 0; i < 10; ++i) {
             figure
-              img(src="images/gallery_kronotex.png", alt="")
+              img(src="images/article_b.png", alt="")
           - }
-        .track.active(data-id="2")
+        .track(data-id="2")
           - for (var i = 0; i < 10; ++i) {
             figure
               img(src="images/gallery_kronotex.png", alt="")
