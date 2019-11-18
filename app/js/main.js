@@ -2,15 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   site.init();
   gallery.init();
   foryou.init();
-  $(".media .slider_product").slick({
-    dots: true
-  });
-  var widthDots = $(".media .slider_product .slick-dots").outerWidth();
-  var marginSlick = widthDots + 10;
-  console.log(marginSlick);
-
-  // porque não funciona?
-  $(".media .slider_product .slick-next").css("left", marginSlick + "px");
+  about.init();
 });
 
 let site = {
@@ -63,6 +55,29 @@ let foryou = {
       $(".foryou_menu ul li").removeClass("active");
       track.addClass("active");
       $(this).addClass("active");
+    });
+  }
+};
+
+let about = {
+  init: function() {
+    $(".modal_product").hide();
+    about.buttonsListenner();
+  },
+  buttonsListenner: function() {
+    $(".about_action").click(function() {
+      // $(".modal_product").addClass("active");
+      $(".modal_product").fadeIn();
+      $(".media .slider_product").slick({
+        dots: true
+      });
+      var widthDots = $(".media .slider_product .slick-dots").outerWidth();
+      var marginSlick = widthDots + 10;
+      $(".media .slider_product .slick-next").css("left", marginSlick + "px");
+    });
+    $(".about_close_action").click(function() {
+      // $(".modal_product").addClass("active");
+      $(".modal_product").fadeOut();
     });
   }
 };

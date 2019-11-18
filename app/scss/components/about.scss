@@ -34,7 +34,7 @@ section#About {
           margin-top: -7vw;
           width: 21.3vw;
           margin-left: 2vw;
-          button {
+          button.about_action {
             background-color: transparent;
             border: 0.2vw solid #000;
             padding: 1vw;
@@ -45,6 +45,7 @@ section#About {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            cursor: pointer;
             > img {
               width: 1.5vw;
             }
