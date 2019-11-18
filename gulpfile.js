@@ -101,5 +101,11 @@ gulp.task(
   function() {}
 );
 
+gulp.task(
+  "build",
+  gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "views")),
+  function() {}
+);
+
 // default function
 gulp.task("default", function() {});
