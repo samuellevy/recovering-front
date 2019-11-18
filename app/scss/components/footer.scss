@@ -1,0 +1,65 @@
+.social_links {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1vw;
+  a {
+    margin: 0 0.5vw;
+    img {
+      width: 1.7vw;
+    }
+  }
+}
+
+.mouse_indicator {
+  position: absolute;
+  top: 0;
+  margin-top: 1vw;
+  left: calc(50% - 2vw);
+  width: 2vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  border: 0.25vw solid #a2a2a2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 0.15vw);
+    background-color: #a2a2a2;
+    width: 0.2vw;
+    height: 1vw;
+    border-radius: 1.5vw;
+    transition: all 0.5s;
+    opacity: 1;
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    from {
+      top: 0vw;
+      opacity: 1;
+    }
+    to {
+      top: 1vw;
+      opacity: 0;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes example {
+    from {
+      top: 0vw;
+      opacity: 1;
+    }
+    to {
+      top: 1vw;
+      opacity: 0;
+    }
+  }
+}
