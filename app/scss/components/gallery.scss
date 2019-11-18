@@ -62,6 +62,7 @@ section#Gallery {
           .track {
             display: none;
             overflow-x: auto;
+            overflow-y: hidden;
             &.active {
               display: flex;
             }
