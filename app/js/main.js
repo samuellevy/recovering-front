@@ -60,6 +60,7 @@ let foryou = {
 };
 
 let about = {
+  i: 0,
   init: function() {
     $(".modal_product").hide();
     about.buttonsListenner();
@@ -67,14 +68,64 @@ let about = {
   buttonsListenner: function() {
     $(".about_action").click(function() {
       // $(".modal_product").addClass("active");
-      $(".modal_product").fadeIn();
-      $(".media .slider_product").slick({
+      $(".modal_product[data-id=0]").fadeIn();
+      $(".modal_product[data-id=0] .media .slider_product").slick({
         dots: true
       });
-      var widthDots = $(".media .slider_product .slick-dots").outerWidth();
+      var widthDots = $(
+        `.modal_product[data-id=${about.i}] .media .slider_product .slick-dots`
+      ).outerWidth();
       var marginSlick = widthDots + 10;
-      $(".media .slider_product .slick-next").css("left", marginSlick + "px");
+      $(`.modal_product[data-id=${about.i}] .media .slider_product .slick-next`).css(
+        "left",
+        marginSlick + "px"
+      );
     });
+
+    $(".about_back_action").click(function() {
+      console.log(about.total);
+      if (about.i > 0) {
+        about.i--;
+      } else {
+        about.i = $(".modal_product").length - 1;
+      }
+      $(".modal_product").hide();
+      $(`.modal_product[data-id=${about.i}]`).fadeIn();
+      $(`.modal_product[data-id=${about.i}] .media .slider_product`).slick({
+        dots: true
+      });
+      var widthDots = $(
+        `.modal_product[data-id=${about.i}] .media .slider_product .slick-dots`
+      ).outerWidth();
+      var marginSlick = widthDots + 10;
+      $(`.modal_product[data-id=${about.i}] .media .slider_product .slick-next`).css(
+        "left",
+        marginSlick + "px"
+      );
+    });
+
+    $(".about_next_action").click(function() {
+      console.log(about.total);
+      if (about.i < $(".modal_product").length - 1) {
+        about.i++;
+      } else {
+        about.i = 0;
+      }
+      $(".modal_product").hide();
+      $(`.modal_product[data-id=${about.i}]`).fadeIn();
+      $(`.modal_product[data-id=${about.i}] .media .slider_product`).slick({
+        dots: true
+      });
+      var widthDots = $(
+        `.modal_product[data-id=${about.i}] .media .slider_product .slick-dots`
+      ).outerWidth();
+      var marginSlick = widthDots + 10;
+      $(`.modal_product[data-id=${about.i}] .media .slider_product .slick-next`).css(
+        "left",
+        marginSlick + "px"
+      );
+    });
+
     $(".about_close_action").click(function() {
       // $(".modal_product").addClass("active");
       $(".modal_product").fadeOut();
