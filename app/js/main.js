@@ -62,7 +62,6 @@ let foryou = {
 let about = {
   i: 0,
   init: function() {
-    $(".modal_product").hide();
     about.buttonsListenner();
   },
   buttonsListenner: function() {
