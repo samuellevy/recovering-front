@@ -22,11 +22,33 @@ section#Products {
           width: 30%;
           padding-right: 2vw;
           position: relative;
-          > img {
-            position: absolute;
-            width: 60vw;
-            top: -5vw;
-            left: 0;
+          &.floors {
+            width: 70%;
+            position: relative;
+            > img {
+              position: absolute;
+              cursor: pointer;
+              opacity: 0.95;
+              &:hover {
+                opacity: 1;
+                z-index: 3;
+              }
+              &.pisos-btn[data-id="laminados"] {
+                width: 60%;
+                top: -4vw;
+                left: 0;
+              }
+              &.pisos-btn[data-id="vinilicos"] {
+                width: 60%;
+                top: -4vw;
+                left: 23vw;
+              }
+              &.pisos-btn[data-id="grandes"] {
+                width: 70%;
+                top: 12vw;
+                left: 16vw;
+              }
+            }
           }
         }
 
@@ -62,6 +84,9 @@ section#Products {
       transition: all 0.5s;
       // overflow-y: scroll;
       // overflow-x: hidden;
+      &.active {
+        transform: translate3D(0, 0, 0);
+      }
     }
   }
 }

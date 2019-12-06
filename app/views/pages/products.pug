@@ -12,9 +12,13 @@ section#Products
             button
               img(src="images/download_icon.png", alt="")
               span Download Catálogo
-        .side
-          img(src="images/pisos-laminados.png", alt="")
-          img(src="images/pisos-vinilicos.png", alt="")
-          img(src="images/pisos-grandes-formatos.png", alt="")
-    .items-box
-      include modal_product.pug
+        .side.floors
+          img.pisos-btn(src="images/pisos-grandes-formatos.png", alt="", data-id="grandes")
+          img.pisos-btn(src="images/pisos-laminados.png", alt="", data-id="laminados")
+          img.pisos-btn(src="images/pisos-vinilicos.png", alt="", data-id="vinilicos")
+    .items-box(data-id="grandes")
+      include modal_product_grandes.pug
+    .items-box(data-id="laminados")
+      include modal_product_laminados.pug
+    .items-box(data-id="vinilicos")
+      include modal_product_vinilicos.pug
