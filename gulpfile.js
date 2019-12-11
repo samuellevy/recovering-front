@@ -62,7 +62,7 @@ gulp.task("pages", function() {
 
 gulp.task("clean", function(cb) {
   // return del.sync([target+'/**/*', '!'+target+'/images', '!'+target+'/images/**/*', '!'+target+'index.php']);
-  return del([target + "**/*"], cb);
+  return del([target + "**/*", "!" + target + "/css/components"], cb);
 });
 
 gulp.task("watch", function() {
@@ -97,7 +97,7 @@ gulp.task("views", function buildHTML() {
 //compile and watch
 gulp.task(
   "dev",
-  gulp.series(gulp.parallel("clean", "sass", "scripts", "images", "views"), "watch"),
+  gulp.series("clean", gulp.parallel("sass", "scripts", "images", "views"), "watch"),
   function() {}
 );
 
