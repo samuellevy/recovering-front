@@ -1,58 +1,42 @@
-.modal_alert
-  .news
-    h2 RECEBA O CATALOGO EM SEU EMAIL
-    .form_news
-      form(action="")
-        span.title_news Insira seu e-mail
-        input(type="text" placeholder="Insira aqui")
-        .accept
-          input(type="checkbox")
-          span.text_news Sim, eu aceito receber os conteúdos da Recovering e compreendo que posso me descadastrar a qualquer momento.
-        .submit
-          button(type="submit") enviar
-  .success_message
-    .message
-      p Recebemos seu contato e em breve você receberá em seu email o catálogo.
-      p Entre em contato com nosso atendimento pelo Whatsapp clicando no icone.
-    .whatsapp
-      img(src="../../images/wpp_icon.png", alt="")
-      .contact
-        h2 21 9999.9999
-        span contato@recovering.com.br
-  .add_galery
-    h2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    span.subtittle Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam iam voluptua.
-    .form
-      form(action="")
-        .line_big
-          span Nome Sobrenome*
-          input(type="text" placeholder="Insira seu Nome Sobrenome")
-        .line_small
-          span Função
-          select(name="function")
-            option(value="" disabled selected) - Selecione -
-        .line_big
-          span E-mail*
-          input(type="text" placeholder="Insira seu e-mail")
-        .line_small
-          span Celular
-          input(type="text" placeholder="00 0000-0000")
-        .line_big
-          span Linha
-          select(name="line")
-            option(value="" disabled selected) - Selecione -
-        .line_small
-          span Marca
-          select(name="brand")
-            option(value="" disabled selected) - Selecione -
-        .item
-          span Produto
-          select(name="product")
-            option(value="" disabled selected) - Selecione -
-        .line_medium
-          input(type="file")
-        .line_medium
-          button Enviar
-        .item
-          input(type="checkbox")
-          span.text_accept Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+.mask
+  .modal_alert
+    .add_galery
+      h2 A Excelência em projetar.
+      span.subtittle A Recovering tem o prazer de divulgar projetos e trabalhos que combinam a qualidade e a excelência de cada ambiente.  Preencha os dados e marque sua presença em nossa galeria.
+      .form
+        form(action="")
+          .line_big
+            span Nome Sobrenome*
+            input(type="text" placeholder="Insira seu Nome Sobrenome")
+          .line_small
+            span Função
+            select(name="function")
+              option(value="" disabled selected) - Selecione -
+          .line_big
+            span E-mail*
+            input(type="text" placeholder="Insira seu e-mail")
+          .line_small
+            span Celular
+            input(type="text" placeholder="00 0000-0000")
+          .line_big
+            span Linha
+            select(name="line")
+              option(value="" disabled selected) - Selecione -
+          .line_small
+            span Marca
+            select(name="brand")
+              option(value="" disabled selected) - Selecione -
+          .item
+            span Produto
+            select(name="product")
+              option(value="" disabled selected) - Selecione -
+          .line_big
+            span Selecionar arquivo
+            input.file_select(type="text" placeholder="Clique aqui")
+            input.file_field(type="file")
+          .line_small
+            .submit
+              button Enviar
+          .item.terms_box
+            input(type="checkbox")
+            span.text_accept Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo

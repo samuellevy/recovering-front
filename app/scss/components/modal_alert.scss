@@ -1,4 +1,4 @@
-.modal_alert{
+.modal_alert {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,12 +10,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2vw 3.5vw;
-  .news{
-    display: none;
+  .news {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    h2{
+    h2 {
       font-size: 1.8vw;
       font-weight: 600;
       font-stretch: normal;
@@ -25,11 +24,11 @@
       text-align: center;
       color: #000000;
     }
-    .form_news{
-      margin-top: .7vw;
-      form{
-        .title_news{
-          font-size: .8vw;
+    .form_news {
+      margin-top: 0.7vw;
+      form {
+        .title_news {
+          font-size: 0.8vw;
           font-weight: bold;
           font-stretch: normal;
           font-style: normal;
@@ -38,12 +37,13 @@
           text-align: left;
           color: #000000;
         }
-        input{
+        input {
           background: #f9ea19;
           width: 100%;
           padding: 1vw;
           border: 0;
-          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
             font-size: 16px;
             font-weight: normal;
             font-stretch: normal;
@@ -55,18 +55,18 @@
             opacity: 1;
           }
         }
-        .accept{
+        .accept {
           display: flex;
           justify-content: flex-start;
-          input{
-            margin-top: .5vw;
+          input {
+            margin-top: 0.5vw;
             cursor: pointer;
             height: 1vw;
             width: 1vw;
           }
-          span{
+          span {
             display: block;
-            font-size: .8vw;
+            font-size: 0.8vw;
             font-weight: 500;
             font-stretch: normal;
             font-style: italic;
@@ -75,41 +75,48 @@
             text-align: left;
             color: #707070;
             margin-top: 0.5vw;
-            margin-left: .2vw;
-          }
-        }
-        .submit{
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          button{
-            font-family: 'Montserrat', sans-serif;
-            background: #000000;
-            border: 0;
-            font-size: 1vw;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.22;
-            letter-spacing: normal;
-            text-align: center;
-            color: #ffffff;
-            padding: .8vw 2.4vw;
-            margin-top: 1.5vw;
-            cursor: pointer;
+            margin-left: 0.2vw;
           }
         }
       }
     }
   }
-  .success_message{
+
+  .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button {
+      font-family: "Montserrat", sans-serif;
+      background: #000000;
+      border: 0;
+      font-size: 1vw;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.22;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      padding: 0.8vw 2.4vw;
+      margin-top: 1.5vw;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .file_field {
+    display: none;
+  }
+
+  .success_message {
     display: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding:  0 3vw;
-    .message{
-      p{
+    padding: 0 3vw;
+    .message {
+      p {
         font-size: 1.4vw;
         font-weight: 600;
         font-stretch: normal;
@@ -121,16 +128,15 @@
         margin-bottom: 1vw;
       }
     }
-    .whatsapp{
+    .whatsapp {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      img{
-
+      img {
       }
-      .contact{
+      .contact {
         margin-left: 1vw;
-        h2{
+        h2 {
           font-size: 2.9vw;
           font-weight: bold;
           font-stretch: normal;
@@ -140,7 +146,7 @@
           text-align: left;
           color: #000000;
         }
-        span{
+        span {
           font-size: 1.4vw;
           font-weight: 500;
           font-stretch: normal;
@@ -153,9 +159,9 @@
       }
     }
   }
-  .add_galery{
+  .add_galery {
     display: block;
-    h2{
+    h2 {
       font-size: 1.4vw;
       font-weight: 600;
       font-stretch: normal;
@@ -166,9 +172,9 @@
       color: #000000;
       margin-bottom: 1.2vw;
     }
-    .subtittle{
+    .subtittle {
       display: block;
-      font-size: .9vw;
+      font-size: 0.9vw;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
@@ -178,13 +184,13 @@
       color: #000000;
       margin-bottom: 1.2vw;
     }
-    .form{
-      form{
+    .form {
+      form {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        span{
+        span {
           display: block;
           width: 100%;
           font-size: 12px;
@@ -195,15 +201,16 @@
           letter-spacing: 0.36px;
           text-align: left;
           color: #000000;
-
         }
-        input, select{
+        input,
+        select {
           background: #f9ea19;
           padding: 1vw;
           border: 0;
           outline: none;
           width: 100%;
-          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
             font-size: 1vw;
             font-weight: normal;
             font-stretch: normal;
@@ -213,7 +220,7 @@
             text-align: center;
             color: #000000;
           }
-          option{
+          option {
             font-size: 1vw;
             font-weight: normal;
             font-stretch: normal;
@@ -222,39 +229,46 @@
             letter-spacing: 0.48px;
             text-align: center;
             color: #000000;
-
           }
         }
-        .line_big{
+        .line_big {
           width: 60%;
           margin-bottom: 0.7vw;
         }
-        .line_medium{
+        .line_medium {
           width: 50%;
           margin-bottom: 0.7vw;
-          input{
+          input {
             visibility: hidden;
-            &:before{
+            &:before {
               display: inline-block;
-              content: '';
+              content: "";
               width: 100%;
               background: linear-gradient(top, #f9f9f9, #e3e3e3);
               height: 1.5vw;
             }
           }
         }
-        .line_small{
+        .line_small {
           width: 35%;
           margin-bottom: 0.7vw;
         }
-        .item{
+        .item {
           width: 100%;
           margin-bottom: 0.7vw;
-          input, select{
+          input,
+          select {
             width: 50%;
           }
         }
       }
+    }
+  }
+  .terms_box {
+    input {
+      width: unset !important;
+      float: left;
+      margin: 4px 8px 0 0;
     }
   }
 }

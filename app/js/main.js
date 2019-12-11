@@ -9,6 +9,7 @@ let site = {
   init: function() {
     console.log("rolando");
     site.buttonsListenner();
+    site.hideModals();
   },
   buttonsListenner: function() {
     var links = document.getElementsByTagName("a");
@@ -22,12 +23,14 @@ let site = {
   toggleMenu: function() {
     let checkBoxInput = document.getElementById("checkBoxInput");
     checkBoxInput.checked = checkBoxInput.checked ? false : true;
+  },
+  hideModals: function() {
+    $(".mask").hide();
   }
 };
 
 let gallery = {
   init: function() {
-    console.log("gallery");
     gallery.buttonsListenner();
   },
   buttonsListenner: function() {
@@ -38,6 +41,18 @@ let gallery = {
       $(".gallery_menu ul li").removeClass("active");
       track.addClass("active");
       $(this).addClass("active");
+    });
+
+    $(".send_project").click(function() {
+      console.log("sending project");
+    });
+
+    $(".file_select").keydown(function() {
+      return false;
+    });
+
+    $(".file_select").click(function() {
+      $(".file_field").trigger("click");
     });
   }
 };
