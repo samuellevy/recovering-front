@@ -26,6 +26,7 @@ let site = {
   },
   hideModals: function() {
     $(".mask").hide();
+    // $(".mask[data-id=modal-gallery]").show();
   }
 };
 
