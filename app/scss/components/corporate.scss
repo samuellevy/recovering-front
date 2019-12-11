@@ -1,0 +1,56 @@
+.corporate {
+  .container {
+    .box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 50px;
+      height: 80vh;
+      @media only screen and (max-width: 600px) {
+        padding: 0 15px;
+      }
+      .item {
+        width: 50%;
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        .title {
+          font-family: Montserrat;
+          font-size: 3.4vw;
+          font-weight: 900;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.33;
+          letter-spacing: 4.2px;
+          text-align: left;
+          color: #000000;
+          margin-top: 50px;
+          margin-bottom: 30px;
+          @media only screen and (max-width: 600px) {
+            font-size: 28px;
+            margin: 20px 0;
+          }
+        }
+        .text {
+          font-family: Montserrat;
+          font-size: 0.9vw;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.56;
+          letter-spacing: 0.48px;
+          text-align: left;
+          color: #000000;
+          margin-bottom: 30px;
+          @media only screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
