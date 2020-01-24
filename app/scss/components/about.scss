@@ -34,6 +34,12 @@ section#About {
           margin-top: -7vw;
           width: 21.3vw;
           margin-left: 2vw;
+          @media screen and (max-width: 600px) {
+            width: 100%;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+          }
           button.about_action {
             background-color: transparent;
             border: 0.2vw solid #000;
@@ -46,6 +52,11 @@ section#About {
             align-items: center;
             justify-content: space-evenly;
             cursor: pointer;
+            @media screen and (max-width: 600px) {
+              font-size: 3vw;
+              padding: 10px;
+              width: 80%;
+            }
             > img {
               width: 1.5vw;
             }

@@ -3,6 +3,9 @@ section#Foryou {
   width: 100%;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 600px) {
+    height: auto;
+  }
   .container {
     height: 100%;
     .content {
@@ -10,6 +13,10 @@ section#Foryou {
       width: 100%;
       height: 100%;
       display: flex;
+      @media screen and (max-width: 600px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
       > div {
         &.foryou_menu {
           // background-color: tomato;
@@ -19,11 +26,24 @@ section#Foryou {
           flex-direction: column;
           padding: 0 3%;
           position: relative;
+          @media screen and (max-width: 600px) {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
           ul {
+            @media screen and (max-width: 600px) {
+              padding: 10px 0;
+              width: 100%;
+            }
             li {
               font-size: 1vw;
               text-transform: uppercase;
               padding: 0.8vw 0;
+              @media screen and (max-width: 600px) {
+                font-size: 4vw;
+                padding: 10px 0;
+              }
               cursor: pointer;
               &.active {
                 font-weight: bold;
@@ -34,6 +54,12 @@ section#Foryou {
           footer {
             position: absolute;
             bottom: 20%;
+            @media screen and (max-width: 600px) {
+              position: relative;
+              margin: 20px 0;
+              width: 100%;
+              bottom: 0;
+            }
             > p {
               text-transform: uppercase;
               font-weight: bold;
@@ -58,6 +84,10 @@ section#Foryou {
           display: flex;
           align-items: center;
           padding-top: 2%;
+          @media screen and (max-width: 600px) {
+            width: 100%;
+            flex-wrap: wrap;
+          }
           .track {
             position: relative;
             display: none;
@@ -67,6 +97,9 @@ section#Foryou {
             flex-wrap: wrap;
             margin-bottom: 3vw;
             overflow: auto;
+            @media screen and (max-width: 600px) {
+              overflow: hidden;
+            }
             &.active {
               display: flex;
             }
@@ -77,41 +110,75 @@ section#Foryou {
               height: 35%;
               padding: 1.8vw;
               margin-top: 2vw;
+              @media screen and (max-width: 600px) {
+                width: 100%;
+                height: auto;
+              }
               h1 {
                 text-transform: uppercase;
                 font-size: 1vw;
                 letter-spacing: 0.12vw;
                 color: #707070;
+                @media screen and (max-width: 600px) {
+                  font-size: 4.5vw;
+                }
               }
               .description {
                 margin-top: 1vw;
                 font-size: 0.8vw;
                 color: #707070;
+                @media screen and (max-width: 600px) {
+                  font-size: 4vw;
+                  line-height: 20px;
+                }
                 .read_more {
                   margin-top: 1vw;
                   text-align: right;
+                  @media screen and (max-width: 600px) {
+                    padding: 10px;
+                  }
                 }
               }
 
               &:nth-child(odd) {
                 margin-right: 4vw;
+                @media screen and (max-width: 600px) {
+                  margin-right: 0;
+                }
               }
 
               &.article_b {
                 width: 55%;
                 display: flex;
                 background-color: #e2e2e2;
+                @media screen and (max-width: 600px) {
+                  width: 100%;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                }
                 .text {
                   width: 50%;
+                  @media screen and (max-width: 600px) {
+                    width: 100%;
+                    margin-top: 30px;
+                  }
                 }
                 figure {
                   width: 50%;
+                  @media screen and (max-width: 600px) {
+                    width: 100%;
+                    order: -1;
+                  }
                   img {
                     margin-left: 10%;
                     width: 90%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
+                    @media screen and (max-width: 600px) {
+                      width: 100%;
+                      margin-left: 0;
+                    }
                   }
                 }
               }
@@ -119,8 +186,17 @@ section#Foryou {
                 width: 55%;
                 display: flex;
                 background-color: #707070;
+                @media screen and (max-width: 600px) {
+                  width: 100%;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                }
                 .text {
                   width: 50%;
+                  @media screen and (max-width: 600px) {
+                    width: 100%;
+                    margin-top: 30px;
+                  }
                   h1 {
                     color: #fbeb3d;
                   }
@@ -130,17 +206,28 @@ section#Foryou {
                 }
                 figure {
                   width: 50%;
+                  @media screen and (max-width: 600px) {
+                    width: 100%;
+                    order: -1;
+                  }
                   img {
                     margin-left: 10%;
                     width: 90%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
+                    @media screen and (max-width: 600px) {
+                      width: 100%;
+                      margin-left: 0;
+                    }
                   }
                 }
               }
               &.article_d {
                 padding: 0;
+                @media screen and (max-width: 600px) {
+                  width: 100%;
+                }
                 figure {
                   width: 100%;
                   height: 100%;

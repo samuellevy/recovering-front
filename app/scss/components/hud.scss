@@ -7,6 +7,9 @@ div.hud {
     height: 5.4vw;
     background-color: #70707055;
     margin: 0 5.4vw;
+    @media screen and (max-width: 600px) {
+      height: 10.4vw;
+    }
   }
   &#right {
     position: fixed;

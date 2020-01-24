@@ -5,5 +5,13 @@ header {
   align-items: center;
   .logo {
     width: 18vw;
+    @media screen and (max-width: 600px) {
+      width: 38vw;
+    }
+  }
+  nav{
+    @media screen and (max-width: 600px) {
+     padding: 20px;
+    }
   }
 }
