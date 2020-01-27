@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   site.init();
   gallery.init();
   foryou.init();
@@ -6,36 +6,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let site = {
-  init: function () {
+  init: function() {
     console.log("rolando");
     site.buttonsListenner();
     site.hideModals();
   },
-  buttonsListenner: function () {
+  buttonsListenner: function() {
     var links = document.getElementsByTagName("a");
     for (var i in links) {
-      links[i].onclick = function (e) {
+      links[i].onclick = function(e) {
         var href = this.href;
         site.toggleMenu();
       };
     }
   },
-  toggleMenu: function () {
+  toggleMenu: function() {
     let checkBoxInput = document.getElementById("checkBoxInput");
     checkBoxInput.checked = checkBoxInput.checked ? false : true;
   },
-  hideModals: function () {
+  hideModals: function() {
     $(".mask").hide();
     $(".mask[data-id=modal-gallery]").show();
   }
 };
 
 let gallery = {
-  init: function () {
+  init: function() {
     gallery.buttonsListenner();
   },
-  buttonsListenner: function () {
-    $(".gallery_menu ul li").click(function () {
+  buttonsListenner: function() {
+    $(".gallery_menu ul li").click(function() {
       let data_id = $(this).attr("data-id");
       let track = $(`.gallery_content .track[data-id=${data_id}]`);
       $(".gallery_content .track").removeClass("active");
@@ -44,27 +44,27 @@ let gallery = {
       $(this).addClass("active");
     });
 
-    $(".send_project").click(function () {
+    $(".send_project").click(function() {
       console.log("sending project");
     });
 
-    $(".file_select").keydown(function () {
+    $(".file_select").keydown(function() {
       return false;
     });
 
-    $(".file_select").click(function () {
+    $(".file_select").click(function() {
       $(".file_field").trigger("click");
     });
   }
 };
 
 let foryou = {
-  init: function () {
+  init: function() {
     console.log("foryou");
     foryou.buttonsListenner();
   },
-  buttonsListenner: function () {
-    $(".foryou_menu ul li").click(function () {
+  buttonsListenner: function() {
+    $(".foryou_menu ul li").click(function() {
       let data_id = $(this).attr("data-id");
       let track = $(`.foryou_content .track[data-id=${data_id}]`);
       $(".foryou_content .track").removeClass("active");
@@ -78,11 +78,11 @@ let foryou = {
 let products = {
   product_type: null,
   product: 0,
-  init: function () {
+  init: function() {
     products.buttonsListenner();
     $(".modal_product[data-id=0]").addClass("active");
   },
-  slick: function () {
+  slick: function() {
     $(
       `.items-box[data-id="${products.product_type}"] .modal_product[data-id=${products.product}] .media .slider_product`
     ).slick({
@@ -96,20 +96,20 @@ let products = {
       `.items-box[data-id="${products.product_type}"] .modal_product[data-id=${products.product}] .media .slider_product .slick-next`
     ).css("left", marginSlick + "px");
   },
-  unslick: function () {
+  unslick: function() {
     $(
       `.items-box[data-id="${products.product_type}"] .modal_product[data-id=${products.product}] .media .slider_product`
     ).slick("unslick");
   },
-  buttonsListenner: function () {
-    $(".pisos-btn").click(function () {
+  buttonsListenner: function() {
+    $(".pisos-btn").click(function() {
       const item_id = $(this).attr("data-id");
       products.product_type = item_id;
       $(`.items-box[data-id=${item_id}]`).addClass("active");
       products.slick();
     });
 
-    $(".product_next_action").click(function () {
+    $(".product_next_action").click(function() {
       products.unslick();
       const length = $(`.items-box[data-id="${products.product_type}"]`).find(".modal_product")
         .length;
@@ -127,7 +127,7 @@ let products = {
       products.slick();
     });
 
-    $(".product_back_action").click(function () {
+    $(".product_back_action").click(function() {
       products.unslick();
       const length = $(`.items-box[data-id="${products.product_type}"]`).find(".modal_product")
         .length;
@@ -145,10 +145,21 @@ let products = {
       products.slick();
     });
 
-    $(".product_close_action").click(function () {
+    $(".product_close_action").click(function() {
       // $(".modal_product").addClass("active");
       $(".items-box").removeClass("active");
       products.unslick();
     });
+    $("section#Home .webdoor").slick({
+      dots: true,
+      infinite: true,
+      arrows: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+    var widthDotsWebdoor = $("section#Home .webdoor .slick-dots").outerWidth();
+    var marginSlickDotsWebdoor = widthDotsWebdoor + 105;
+    $("section#Home .webdoor .slick-next").css("left", marginSlickDotsWebdoor + "px");
   }
 };
