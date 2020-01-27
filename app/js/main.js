@@ -163,7 +163,7 @@ let products = {
       slidesToScroll: 1
     });
     var widthDotsWebdoor = $("section#Home .webdoor .slick-dots").outerWidth();
-    var marginSlickDotsWebdoor = widthDotsWebdoor + 105;
+    var marginSlickDotsWebdoor = widthDotsWebdoor + 130;
     $("section#Home .webdoor .slick-next").css("left", marginSlickDotsWebdoor + "px");
   }
 };
