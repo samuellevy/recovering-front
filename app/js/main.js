@@ -12,13 +12,17 @@ let site = {
     site.hideModals();
   },
   buttonsListenner: function() {
-    var links = document.getElementsByTagName("a");
-    for (var i in links) {
-      links[i].onclick = function(e) {
-        var href = this.href;
-        site.toggleMenu();
-      };
-    }
+    // var links = document.getElementsByTagName("a");
+    // for (var i in links) {
+    //   links[i].onclick = function(e) {
+    //     var href = this.href;
+    //     site.toggleMenu();
+    //   };
+    // }
+
+    $("#menu a").click(function() {
+      site.toggleMenu();
+    });
   },
   toggleMenu: function() {
     let checkBoxInput = document.getElementById("checkBoxInput");
